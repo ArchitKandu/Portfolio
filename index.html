@@ -13,13 +13,29 @@
     <title>Archit Kandu</title>
 </head>
 <body>
+    <header>
+        <nav class="navigation">
+            <div class="logo"><img src="./assets/logo.png" alt="logo"></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">PROJECTS</a></li>
+                    <li><a href="#">CONTACTS</a></li>
+                </ul>
+            </div>
+            <div class="hamburger">
+                <span class="bar"><button><i class="fas fa-bars"></i></button></span>
+                <span class="cross"><button><i class="fas fa-xmark"></i></button></span>
+            </div>
+        </nav>
+    </header>
     <div class="container-fluid g-0">
         <section class="home" id="home">
-            <div class="blur-bg"></div>
             <div class="center-div">
                 <div class="messages">
-                    <div class="hello">HELLO WORLD! I AM </div>
-                    <div class="name">ARCHIT</div>
+                    <div class="hello">HELLO WORLD!</div>
+                    <div>I AM <span class="name">ARCHIT</span></div>
                     <div>A <span class="specs">WEB DEVELOPER</span></div>
                     <div class="short-message">EXPLORE THE REALM OF MY CODING POWRESS,<br/>WHERE IMAGINATION MEETS FUNCTIONALITY</div>
                 </div>    
@@ -27,7 +43,10 @@
         </section>
 
         <section class="about" id="about">
-            
+            <div class="about-container">
+                <div class="profile"></div>
+                <div class="about-text"></div>
+            </div>
         </section>
 
         <section class="projects" id="projects">

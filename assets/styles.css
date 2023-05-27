@@ -34,24 +34,88 @@ html{
         font-size: 12px;
     }
 }
-.blur-bg{
-    width: 100%;
-    height: 100vh;
-    position: absolute;
+body{
     background-image: url(./background.jpg);
     background-attachment: fixed;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -10;
 }
-.blur-bg::before{
+body::before{
     content: "";
     position: absolute;
     width: 100%;
     height: 100vh;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px);
 }
+body *{
+    z-index: 10;
+}
+nav{
+    display: flex;
+    height: 10%;
+    width: 100%;
+    background: rgba(0,0,0,0.3);
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    height: 80%;
+    margin-left: 20px;
+    border-radius: 10%;
+}
+.menu{
+    width: 70%;
+    margin-right: 20px;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 15px;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--white);
+}
+nav ul li a:hover{
+    color: var(--orange);
+}
+.hamburger{
+    margin: 30px;
+    font-size: 30px;
+}
+.bar , .cross{
+    position: absolute;
+    right: 20px;
+    bottom: 22px;
+    display: none;
+}
+button{
+    all: unset;
+}
+/* @media screen and (max-width: 500px) {
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 80vh;
+        font-size: 20px;
+        background: rgba(0,0,0,0.6);
+        z-index: 200;
+        position: absolute;
+        right: 0%;
+    }
+    .bar , .cross{
+        display: block;
+    }
+} */
 .center-div{
     height: 100%;
     display: flex;
@@ -75,4 +139,8 @@ html{
 .specs{
     font-size: 3rem;
     font-weight: 600 !important;
+}
+.about{
+    height: 100%;
+    background-color: var(--primary);
 }
