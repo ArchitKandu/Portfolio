@@ -1,0 +1,26 @@
+/* bg:  #232946  #0e172c*/
+/* headline: #fffffe */
+/* paragraph: #b8c1ec */
+/* card bg: #d9d4e7 */
+/* https://www.happyhues.co/palettes/12
+https://www.happyhues.co/palettes/2 */
+/* https://coolors.co/e94100-00113f-1a2650-000534-ffffff */
+:root{
+    --orange: #e94100;
+    --primary: #00113f;
+    --secondary: #1a2650;
+    --tertiary: #000534;
+    --white: #ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    background-color: var(--secondary) !important;
+}
+body{
+    font-family: 'Comfortaa', cursive;
+    background-color: var(--primary) !important;
+}
