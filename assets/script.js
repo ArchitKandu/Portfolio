@@ -1,5 +1,6 @@
 const checkbox = document.getElementById('check');
 const menuOpen = document.getElementById('open');
+const bodyElement = document.body;
 
 // Function to handle the checkbox state change
 function handleCheckboxChange() {
@@ -24,4 +25,15 @@ function checkScreenWidth() {
 }  
 // Call the function on page load and whenever the window is resized
 window.addEventListener('load', checkScreenWidth);
-window.addEventListener('resize', checkScreenWidth);  
+window.addEventListener('resize', checkScreenWidth); 
+
+// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("logo").style.width = "3rem";
+  } else {
+    document.getElementById("logo").style.width = "4rem";
+  }
+}

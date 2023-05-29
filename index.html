@@ -16,13 +16,13 @@
     <header>
         <nav>
             <ul class="nav-bar">
-                <li class="logo"><a href="#"><img src="./assets/logo.png" alt="logo"></a></li>
+                <li class="logo"><a href="#"><img src="./assets/logo.png" alt="logo" id="logo"/></a></li>
                 <input type="checkbox" id="check"/>
                 <span class="menu">
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">PROJECTS</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#contacts">CONTACT</a></li>
                     <label for="check" class="close-menu" id="close"><i class="fas fa-xmark"></i></label>
                 </span>
                 <label for="check" class="open-menu" id="open"><i class="fas fa-bars"></i></label>
@@ -45,22 +45,65 @@
             <h1>ABOUT ME</h1>
             <div class="about-container">
                 <div class="profile-img">
-                    <img src="./assets/Profile.jpg" alt="profile"/>
+                    <div class="image"><img src="./assets/Profile.jpg" alt="profile"/></div>
                     <div class="profile-name">ARCHIT KANDU</div>
                     <div class="profile-job">WEB DEVELOPER</div>
-                    <div class="flex-btnn"><button type="button" class="btn btn-light">CONTACT</button></div>
-
+                    <div class="flex-btnn"><button type="button" class="btn btn-light">RESUME</button></div>
                 </div>
 
                 <div class="about-text">
                     <div class="about-card">
-                        <div class="about-nav"></div>
-                        <div class="about-text-content">
+                        <!-- <div class="about-nav">
+                            <nav>
+                                <ul class="about-nav-bar">
+                                    <li><a href="#">PROFILE</a></li>
+                                    <li><a href="#">EDUCATION</a></li>
+                                    <li><a href="#">SKILLS</a></li>
+                                </ul>
+                            </nav>
+                        </div> -->
+                        <div class="about-text-content" id="profile">
+                            <h4>PROFILE</h4>
                             <p>
                                 I am a skilled developer with proficiency in C, C++, JavaScript, and a basic understanding of Python. I have a working knowledge of Oracle Database. My adaptability allows me to quickly grasp new technologies and work in diverse environments. I excel in effective communication, conveying complex concepts to both technical and non-technical stakeholders. I thrive in collaborative settings, valuing teamwork and offering support to achieve shared goals. I prioritize continuous learning and stay up-to-date with industry trends. Committed to delivering high-quality solutions, I am eager to take on new challenges and contribute to meaningful projects. Let's discuss potential collaborations or opportunities.
                             </p>
-                            <div class="flex-btnn"><button type="button" class="btn btn-light">DOWNLOAD RESUME</button></div>
                         </div>
+                        <div class="section-divider"></div>
+                        <div class="about-text-content" id="education">
+                            <h4>EDUCATION</h4>
+                            <div class="time-collage">
+                                <div class="year">
+                                    2020-24
+                                </div>
+                                <div class="collage-details">
+                                    <div class="university">
+                                        KALINGA INSTITUTE OF TECHNOLOGY, <span class="location">BHUBANESWAR</span>
+                                    </div>
+                                    <div class="course">
+                                        BACHELOR IN TECHNOLOGY (BTECH)
+                                    </div>
+                                    <div class="branch">
+                                        COMPUTER SCIENCE AND ENGINEERING<br>
+                                        CGPA OBTAINED <span class="till-current">(till current semester)</span>: 8.85
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="time-collage">
+                                <div class="year">
+                                    2019-20
+                                </div>
+                                <div class="collage-details">
+                                    <div class="university">
+                                        SUNBEAM SCHOOL VARUNA,  <span class="location">VARANASI</span>
+                                    </div>
+                                    <div class="course">
+                                        HIGH SCHOOL (12th STD)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-divider"></div>
                     </div>
                 </div>
             </div>

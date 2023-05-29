@@ -24,6 +24,7 @@ https://www.happyhues.co/palettes/2 */
 }
 html{
     font-size: 20px;
+    scroll-behavior: smooth;
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     html{
@@ -51,10 +52,12 @@ body{
 }
 body::before{
     content: "";
-    position: absolute;
+    position: fixed;
+    /* position: absolute; */
     width: 100%;
     height: 100vh;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(5px);
+    z-index: -5;
 }
 header{
     position: fixed;
@@ -68,15 +71,16 @@ header{
     padding: 7px 15px;
     list-style: none;
     position: relative;
-    background-color: rgba(0, 0, 0,0.6);
+    background: rgba(0, 0, 0,0.8);
 }
 .logo img{
     width: 4rem;
     border-radius: 5px;
+    transition: 0.4s;
 }
 .menu { display: flex; }
 .menu li { padding: 20px; }
-.menu li a{
+.menu li a, .about-nav-bar a{
     display: inline-block;
     text-decoration: none;
     color: var(--white);
@@ -84,7 +88,7 @@ header{
     transition: 0.15s ease-in-out;
     position: relative;
 }
-.menu li a::after{
+.menu li a::after, .about-nav-bar a::after{
     content: "";
     position: absolute;
     bottom: 0;
@@ -94,7 +98,7 @@ header{
     background-color: var(--orange);
     transition: 0.15s ease-in-out;
 }
-.menu li a:hover::after{width: 100%;}
+.menu li a:hover::after, .about-nav-bar a:hover::after{width: 100%;}
 .open-menu, .close-menu{
     position: absolute;
     cursor: pointer;
@@ -161,22 +165,63 @@ header{
 }
 .about{
     height: fit-content;
-    background-color: var(--primary);
+    background-color: var(--secondary);
+    width: 95%;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.5), 0 2px 8px 0 rgba(255, 255, 255, 0.5);
+}
+.about h1{
+    font-size: 2.5rem;
+    padding: 2rem;
+    text-decoration: underline;
+    text-align: center;
 }
 .about-container{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .about-card{
     margin-top: 20px;
-    background: var(--secondary);
-    padding: 20px;
-    border-radius: 20px;
+    background: var(--primary);
+    padding: 0 0 20px 0;
+    border-radius: 5px;
+    max-width: 1000px;
+}
+.about-nav {position: relative;}
+.about-nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0,0.8);
+    width: 100%;
+    height: 50px;
+    border-radius: 5px 5px 0 0;
+    list-style: none;
+}
+.about-nav-bar a{
+    text-decoration: none;
+    color: var(--white);
 }
 .profile-img{
     text-align: center;
-    margin-top: 20px;
-    border-radius: 20px;
+    margin: 0 auto 30px auto; 
+    width: fit-content;
+    max-width: 350px;
+    padding: 10px;
+    background-color: var(--primary);
+    border-radius: 5px;
+}
+.profile-img .image{
+    border: 2px solid var(--orange);
+    padding: 0.5rem;
+    width: fit-content;
+    margin: auto;
+    border-radius: 5px;
+}
+.profile-img .image img{
+    border-radius: 5px;
 }
 .profile-name, .profile-job{
     text-align: center;
@@ -185,32 +230,57 @@ header{
     padding-right: 30px;
 }
 .profile-name{
-    font-size: 2rem;
+    font-size: 1.75rem;
     padding-top: 20px;
     color: var(--orange);
     font-weight: 600;
 }
 .profile-job{
-    font-size: 1.5rem;
-}
-.about h1{
-    font-size: 2.5rem;
-    padding: 2rem;
+    font-size: 1.25rem;
 }
 .profile-img img{
     min-width: 200px;
     max-width: 300px;
     width: 100%;
-    padding: 0 1rem;
-    border-radius: 20%;
-}
-.profile-img{
-    padding-bottom: 20px;
 }
 .about-text{
     padding: 0 2rem 2rem 2rem;
     text-align: justify;
     font-size: 1.1rem;
+}
+.about-text-content{
+    padding: 10px 10px 0 10px;
+}
+.about-text-content h4{
+    color: var(--orange);
+    text-decoration: underline;
+}
+.about-text-content .time-collage{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.year{
+    min-width: 25%;
+    text-align: center;
+}
+.university{
+    font-size: 1.25rem;
+}
+.course, .branch{
+    font-size: 0.75rem;
+}
+.location{
+    font-size: 0.85rem;
+}
+.till-current{
+    font-size: 0.65rem;
+}
+.section-divider{
+    height: 3px;
+    width: 95%;
+    background-color: var(--orange);
+    margin: 30px auto 10px auto;
 }
 @media screen and (max-width: 720px) {
     .about-container{
@@ -227,13 +297,20 @@ header{
     margin: 10px;
     background-color: var(--white) !important;
     color: var(--primary) !important;
+    transition: 0.6s;
 }
 .btn:hover{
     background-color: var(--primary) !important;
     color: var(--white) !important;
+    transition: 0.6s;
 }
 .flex-btnn{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.projects{
+    height: 100vh;
+    width: 100%;
+    /* background-color: var(--primary); */
 }
