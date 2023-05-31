@@ -53,7 +53,6 @@ body{
 body::before{
     content: "";
     position: fixed;
-    /* position: absolute; */
     width: 100%;
     height: 100vh;
     backdrop-filter: blur(5px);
@@ -80,7 +79,7 @@ header{
 }
 .menu { display: flex; }
 .menu li { padding: 20px; }
-.menu li a, .about-nav-bar a{
+.menu li a {
     display: inline-block;
     text-decoration: none;
     color: var(--white);
@@ -88,7 +87,7 @@ header{
     transition: 0.15s ease-in-out;
     position: relative;
 }
-.menu li a::after, .about-nav-bar a::after{
+.menu li a::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -98,7 +97,7 @@ header{
     background-color: var(--orange);
     transition: 0.15s ease-in-out;
 }
-.menu li a:hover::after, .about-nav-bar a:hover::after{width: 100%;}
+.menu li a:hover::after {width: 100%;}
 .open-menu, .close-menu{
     position: absolute;
     cursor: pointer;
@@ -169,6 +168,7 @@ header{
     width: 95%;
     margin: auto;
     border-radius: 5px;
+    padding-bottom: 2rem;
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.5), 0 2px 8px 0 rgba(255, 255, 255, 0.5);
 }
 .about h1{
@@ -188,21 +188,6 @@ header{
     padding: 0 0 20px 0;
     border-radius: 5px;
     max-width: 1000px;
-}
-.about-nav {position: relative;}
-.about-nav-bar{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: rgba(0, 0, 0,0.8);
-    width: 100%;
-    height: 50px;
-    border-radius: 5px 5px 0 0;
-    list-style: none;
-}
-.about-nav-bar a{
-    text-decoration: none;
-    color: var(--white);
 }
 .profile-img{
     text-align: center;
@@ -251,9 +236,10 @@ header{
 .about-text-content{
     padding: 10px 10px 0 10px;
 }
-.about-text-content h4{
+.about h4{
     color: var(--orange);
     text-decoration: underline;
+    font-size: 1.5rem;
 }
 .about-text-content .time-collage{
     display: flex;
@@ -291,6 +277,11 @@ header{
         max-width: 200px;
     }
 }
+@media screen and (min-width: 721px) {
+    .profile-img{
+        margin-left: 20px;
+    }
+}
 .btn{
     min-width: 200px;
     min-height: 30px;
@@ -309,6 +300,79 @@ header{
     justify-content: center;
     align-items: center;
 }
+.skills{
+    width: 95%;
+    margin: auto;
+    background-color: var(--primary);
+    border-radius: 5px;
+    padding: 10px 10px 20px 10px;
+}
+.skills h4{
+    margin-bottom: 10px;
+}
+.skill-box{
+    max-width: 1200px;
+    background-color: var(--secondary);
+    margin: auto;
+    border-radius: 5px;
+    padding: 20px 10px;
+}
+.single-skill{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2rem;
+    margin-bottom: 2rem;
+}
+.bar{
+    position: absolute;
+    top: 1.75rem;
+    height: 0.3rem;
+    background-color: var(--white);
+    border-radius: 10px;
+}
+/* @keyframes progressAnimation1 {
+    0% {width: 5%;}
+    100% { width: 90%;}
+}
+@keyframes progressAnimation2 {
+    0% {width: 5%;}
+    100% { width: 75%;}
+}
+@keyframes progressAnimation3 {
+    0% {width: 5%;}
+    100% { width: 60%;}
+}
+@keyframes progressAnimation4 {
+    0% {width: 5%;}
+    100% { width: 70%;}
+}
+@keyframes progressAnimation5 {
+    0% {width: 5%;}
+    100% { width: 50%;}
+} */
+.bar-1{
+    width: 90%;
+}
+.bar-2{
+    width: 75%;
+}
+.bar-3{
+    width: 60%;
+}
+.bar-4{
+    width: 70%;
+}
+.bar-5{
+    width: 50%;
+}
+@media screen and (min-width: 600px) {
+    .skill-box{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 .projects{
     height: 100vh;
     width: 100%;
