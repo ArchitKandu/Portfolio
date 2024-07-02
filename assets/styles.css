@@ -71,6 +71,14 @@ header{
     list-style: none;
     position: relative;
     background: rgba(0, 0, 0,0.8);
+    transition: padding 0.3s ease-in-out;
+}
+#nav-name{
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    color: var(--white);
+    text-decoration: none;
+    transition: font-size 0.3s ease-in-out;
 }
 .logo img{
     width: 4rem;
@@ -162,7 +170,7 @@ header{
     font-size: 3rem;
     font-weight: 600 !important;
 }
-.about{
+.about, .projects{
     height: fit-content;
     background-color: var(--secondary);
     width: 95%;
@@ -171,7 +179,7 @@ header{
     padding-bottom: 2rem;
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.5), 0 2px 8px 0 rgba(255, 255, 255, 0.5);
 }
-.about h1{
+.about h1, .projects h1{
     font-size: 2.5rem;
     padding: 2rem;
     text-decoration: underline;
@@ -258,9 +266,6 @@ header{
 }
 .location{
     font-size: 0.85rem;
-}
-.till-current{
-    font-size: 0.65rem;
 }
 .section-divider{
     height: 3px;
@@ -370,6 +375,44 @@ header{
     .skill-box{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+.projects {
+    margin-top: 2rem;
+    text-align: center;
+}
+.project-description {
+    text-align: justify;
+}
+.project-box {
+    padding: 5px;
+}
+.project-card {
+    background-color: var(--primary);
+    border-radius: 5px;
+    max-width: 400px;
+    height: 100%;
+    margin: 5px auto;
+    padding: 10px;
+}
+.project-image img {
+    width: 100%;
+    border-radius: 5px;
+}
+#view-button {
+    margin: 1rem;
+}
+@media screen and (min-width: 720px) {
+    .project-box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: self-start;
+        justify-content: center;
+    }
+}
+@media screen and (min-width: 720px) and (max-width: 1300px) {
+    .project-card {
+        margin: 5px;
     }
 }
 

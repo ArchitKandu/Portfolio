@@ -15,8 +15,9 @@
 <body>
     <header>
         <nav>
-            <ul class="nav-bar">
-                <li class="logo"><a href="#"><img src="./assets/images/logo.png" alt="logo" id="logo"/></a></li>
+            <ul class="nav-bar" id="nav-bar">
+                <!-- <li class="logo"><a href="#"><img src="./assets/images/logo.png" alt="logo" id="logo"/></a></li> -->
+                 <li><a href="#" id="nav-name">Archit</a></li>
                 <input type="checkbox" id="check"/>
                 <span class="menu">
                     <li><a href="#home">HOME</a></li>
@@ -48,7 +49,7 @@
                     <div class="image"><img src="./assets/images/Profile.jpg" alt="profile"/></div>
                     <div class="profile-name">ARCHIT KANDU</div>
                     <div class="profile-job">WEB DEVELOPER</div>
-                    <div class="flex-btnn"><button type="button" class="btn btn-light">RESUME</button></div>
+                    <div class="flex-btnn"><button type="button" class="btn btn-light" onclick="window.location.href='https\://drive.google.com/file/d/1_uCGc-tJuFBGz8aueuBlzrNd6aw22rvC/view?usp=sharing'">RESUME</button></div>
                 </div>
 
                 <div class="about-text">
@@ -75,7 +76,7 @@
                                     </div>
                                     <div class="branch">
                                         COMPUTER SCIENCE AND ENGINEERING<br>
-                                        CGPA OBTAINED <span class="till-current">(till current semester)</span>: 8.85
+                                        CGPA OBTAINED: 8.93
                                     </div>
                                 </div>
                             </div>
@@ -90,6 +91,23 @@
                                     </div>
                                     <div class="course">
                                         HIGH SCHOOL (12th STD)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-divider"></div>
+                        <div class="about-text-content" id="experience">
+                            <h4>EXPERIENCE</h4>
+                            <div class="time-collage">
+                                <div class="year">
+                                    FEB '24-
+                                </div>
+                                <div class="collage-details">
+                                    <div class="university">
+                                        SDE - INTERN, <span class="location">BENGALURU</span>
+                                    </div>
+                                    <div class="course">
+                                        CSG SYSTEMS INTERNATIONAL PVT. LTD.
                                     </div>
                                 </div>
                             </div>
@@ -142,14 +160,14 @@
                     </div>
                     <div class="project-link">
                         <a href="https://github.com/ArchitKandu/Babble" target="_blank" rel="noopener noreferrer">
-                            See project in GitHub
+                            <button type="button" class="btn btn-light" id="view-button">View Project</button>
                         </a>
                     </div>
                     <div class="project-description">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae temporibus odio, alias labore culpa ipsa
-                            doloremque id illo velit architecto magnam, nihil suscipit officiis ad distinctio minima? Adipisci aliquam
-                            obcaecati dolor nisi asperiores voluptatibus ipsa dolore earum? Facere beatae, aliquid accusamus explicabo
-                            corrupti veniam, distinctio vero sapiente recusandae magnam libero.</p>
+                        <p>Babble is a web-based full-stack chat application. It allows users to create accounts, join chat
+                        rooms, and engage in real-time conversations with other users. With features like user authentication, group chats,
+                        and more, Babble provides a seamless and interactive chatting experience. <br> Technology Used: MongoDB, ExpressJS, ReactJS, NodeJS
+                        (MERN Stack).</p>
                     </div>
                 </div>
                 <div class="project-card">
@@ -161,14 +179,12 @@
                     </div>
                     <div class="project-link">
                         <a href="https://github.com/ArchitKandu/Cryptonaut" target="_blank" rel="noopener noreferrer">
-                            See project in GitHub
+                            <button type="button" class="btn btn-light" id="view-button">View Project</button>
                         </a>
                     </div>
                     <div class="project-description">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae temporibus odio, alias labore culpa ipsa
-                            doloremque id illo velit architecto magnam, nihil suscipit officiis ad distinctio minima? Adipisci aliquam
-                            obcaecati dolor nisi asperiores voluptatibus ipsa dolore earum? Facere beatae, aliquid accusamus explicabo
-                            corrupti veniam, distinctio vero sapiente recusandae magnam libero.</p>
+                        <p>Cryptonaut is a web application built with React that allows users to explore details of various
+                        cryptocurrencies using the CoinGecko API. <br> Technology Used: ReactJS.</p>
                     </div>
                 </div>
                 <div class="project-card">
@@ -180,24 +196,23 @@
                     </div>
                     <div class="project-link">
                         <a href="https://github.com/ArchitKandu/MediMate" target="_blank" rel="noopener noreferrer">
-                            See project in GitHub
+                            <button type="button" class="btn btn-light" id="view-button">View Project</button>
                         </a>
                     </div>
                     <div class="project-description">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae temporibus odio, alias labore culpa ipsa
-                            doloremque id illo velit architecto magnam, nihil suscipit officiis ad distinctio minima? Adipisci aliquam
-                            obcaecati dolor nisi asperiores voluptatibus ipsa dolore earum? Facere beatae, aliquid accusamus explicabo
-                            corrupti veniam, distinctio vero sapiente recusandae magnam libero.</p>
+                        <p>MediMate is a backend for a medication management system designed to help users keep track of
+                        their medications and receive timely reminders for doses. <br> Technology Used: MongoDB, ExpressJS, NodeJS.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="contacts" id="contacts">
+            <h1>CONTACTS</h1>
             <div class="contact-info">
                 <div>BHUBANESWAR, ODISHA</div>
                 <div><a href="tel:+919792445971">+91-9792445971</a></div>
-                <div><a href="mailto:architkandu@hotmail.com">architkandu@hotmail.com</a></div>
+                <div><a href="mailto:architkandu@hotmail.com">architkandu@gmail.com</a></div>
                 <div><a href="https://github.com/ArchitKandu" target="_blank">ArchitKandu</a></div>
                 <div><a href="inkedin.com/in/architkandu" target="_blank">Archit Kandu</a></div>
 
