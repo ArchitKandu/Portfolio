@@ -18,13 +18,13 @@ This was a website built to showcase my technical skills, web design skills.
 
 ## Homepage visuals
 
-<img src="images/demo/1.jpg"/>
+<img src="assets/images/demo/1.jpg"/>
 
-<img src="images/demo/2.jpg"/>
+<img src="assets/images/demo/2.jpg"/>
 
-<img src="images/demo/3.jpg"/>
+<img src="assets/images/demo/3.jpg"/>
 
-<img src="images/demo/4.jpg"/>
+<img src="assets/images/demo/4.jpg"/>
 
-<img src="images/demo/5.jpg"/>
+<img src="assets/images/demo/5.jpg"/>
 
