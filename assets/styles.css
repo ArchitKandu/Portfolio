@@ -170,7 +170,7 @@ header{
     font-size: 3rem;
     font-weight: 600 !important;
 }
-.about, .projects{
+.about, .projects, .contacts{ 
     height: fit-content;
     background-color: var(--secondary);
     width: 95%;
@@ -179,7 +179,7 @@ header{
     padding-bottom: 2rem;
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.5), 0 2px 8px 0 rgba(255, 255, 255, 0.5);
 }
-.about h1, .projects h1{
+.about h1, .projects h1, .contacts h1{
     font-size: 2.5rem;
     padding: 2rem;
     text-decoration: underline;
@@ -288,7 +288,6 @@ header{
     }
 }
 .btn{
-    min-width: 200px;
     min-height: 30px;
     margin: 10px;
     background-color: var(--white) !important;
@@ -322,57 +321,32 @@ header{
     border-radius: 5px;
     padding: 20px 10px;
 }
-.single-skill{
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 2rem;
-    margin-bottom: 2rem;
+.skill-type-name{
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    text-decoration: underline;
 }
-.bar{
-    position: absolute;
-    top: 1.75rem;
-    height: 0.3rem;
-    background-color: var(--white);
-    border-radius: 10px;
+.single-skill {
+    padding: 5px;
 }
-/* @keyframes progressAnimation1 {
-    0% {width: 5%;}
-    100% { width: 90%;}
+.single-skill i{
+    font-size: 1.5rem;
 }
-@keyframes progressAnimation2 {
-    0% {width: 5%;}
-    100% { width: 75%;}
+.skill-name{
+    font-size: 1.25rem;
 }
-@keyframes progressAnimation3 {
-    0% {width: 5%;}
-    100% { width: 60%;}
-}
-@keyframes progressAnimation4 {
-    0% {width: 5%;}
-    100% { width: 70%;}
-}
-@keyframes progressAnimation5 {
-    0% {width: 5%;}
-    100% { width: 50%;}
-} */
-.bar-1{
-    width: 90%;
-}
-.bar-2{
-    width: 75%;
-}
-.bar-3{
-    width: 60%;
-}
-.bar-4{
-    width: 70%;
-}
-.bar-5{
-    width: 50%;
+.skills .section-divider {
+    width: 98%;
 }
 @media screen and (min-width: 600px) {
-    .skill-box{
+    .all-skill{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 599px){
+    .all-skill {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
@@ -416,8 +390,91 @@ header{
     }
 }
 
-.contacts{
-    height: 100vh;
+.contacts {
+    margin: 2rem auto;
+    padding: 0 10px 15px 10px;
+}
+.contact-box {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.contact-form, .contact-info {
+    width: 50%;
+    margin: 0 5px;
+    padding: 20px;
+    border-radius: 5px;
+}
+.contact-form {
+    background-color: var(--primary);
+}
+.form-header{
+    text-align: center;
+}
+.form-header h4{
+    color: var(--orange);
+    text-decoration: underline;
+}
+.form-header p{
+    color: var(--orange);
+}
+.form-elements label, .form-elements input, .form-elements textarea{
     width: 100%;
-    /* background-color: var(--primary); */
+}
+
+.form-elements input, .form-elements textarea {
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+}
+.form-elements input {
+    margin-bottom: 15px;
+}
+.submit-button {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: none;
+}
+
+@media screen and (max-width: 550px) {
+    .contact-box {
+        flex-direction: column;
+    }
+    .contact-form, .contact-info{
+        width: 100%;
+        margin: 5px auto;
+    }
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.contact-divider{
+    width: 95%;
+    border: var(--orange) 1px solid;
+    margin: 10px;
+}
+.contact-detail a {
+    display: flex;
+    width: 20rem;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+}
+.contact-circle {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.25rem;
+}
+.contact-text{
+    margin-left: 20px;
 }
